@@ -29,14 +29,14 @@ class AVLTree {
         return Contains(node->right, key);
     }
 
-    int Height(Node* node) const{
+    int Height(Node* node) const {
         if (node == nullptr) {
             return -1;
         }
         return node->height;
     }
 
-    size_t Weight(Node* node) const{
+    size_t Weight(Node* node) const {
         if (node == nullptr) {
             return 0;
         }
@@ -154,13 +154,13 @@ class AVLTree {
                 return;
             }
             if (node->left == nullptr) {
-                Node* const node_right = node->right;
+                Node* node_right = node->right;
                 delete node;
                 node = node_right;
                 return;
             }
             if (node->right == nullptr) {
-                Node* const node_left = node->left;
+                Node* node_left = node->left;
                 delete node;
                 node = node_left;
                 return;
@@ -216,7 +216,7 @@ class AVLTree {
         }
     }
 
-    void Print(Node* const node) {
+    void Print(Node* node) {
         if (node == nullptr) {
             return;
         }
